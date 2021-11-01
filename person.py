@@ -19,7 +19,8 @@ class person:
         eCH = int(keys[1])
         x=[]
         for ch in m:
-            dobx = (ord(ch)**eCH) % nCH
+            #возведение в степень с остатком
+            dobx = stost(ord(ch),eCH,nCH)
             x.append(dobx)
         return x
 
@@ -27,7 +28,8 @@ class person:
 
         m = ''
         for num in x:
-            dobm = (num**self.d) % self.n
+            # возведение в степень с остатком
+            dobm = stost(num,self.d,self.n)
             m+=chr(dobm)
         return m
 
@@ -50,3 +52,10 @@ def fev(A,B):   #Версия алгоритма Евклида для шифр�
 
     #print(yx)
     return (yx)
+
+def stost(a,b,delit):#Возведение в степень с остатком
+    res=1
+    for i in range(b):
+        res*=a
+        res = res % delit
+    return (res)
