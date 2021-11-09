@@ -4,7 +4,7 @@ Bill = pers(2767,2633,179)
 
 Ak = Ann.key
 Bk = Bill.key
-sBill=Bill.shifr("Здравствуй Анна",Ak)
+sBill=Bill.shifr("Здравствуй Анна, Федор Максимович Гризик",Ak)
 readAnna = Ann.deshifr(sBill)
 print(readAnna)
 
